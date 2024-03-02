@@ -5,20 +5,20 @@ metadata:
   name: worker-app-deploy
   labels:
     name: worker-app-deploy
-    app: demo-voting-app
+    app: voting-app
 spec:
   replicas: 1
   selector:
     matchLabels:
       name: worker-app-pod
-      app: demo-voting-app
+      app: voting-app
   template:
     metadata:
       name: worker-app-pod
       labels:
         name: worker-app-pod
-        app: demo-voting-app
+        app: voting-app
     spec:
       containers:
       - name: worker-app
-        image: kodekloud/examplevotingapp_worker:v1
+        image: sugan/examplvotingapp_worker:v1
